@@ -1,0 +1,23 @@
+﻿
+        @model Categorie
+        @section Scripts {
+            @{
+                <partial name="_ValidationScriptsPartial" />
+            }
+        }
+        <h1>la page de creation ...</h1>
+        <form method="post">
+            <div class="mb-3 raw">
+                <label asp-for="Nom"></label>
+                <input asp-for="Nom" class="form-control" />
+            </div>
+            <div class="mb-3 raw">
+                <label asp-for="OrdreAffichage"></label>
+                <input asp-for="OrdreAffichage" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary form-control"> Créer Catégorie</button>
+        </form>
+        <a asp-controller="Categorie" asp-action="Index" class="btn btn-outline-secondary form-control">Retour à la liste</a>
+        <span asp-validation-for="Nom" class="text-danger"></span>
+        <span asp-validation-for="OrdreAffichage" class="text-danger"></span>
+        <div asp-validation-summary="All"></div>

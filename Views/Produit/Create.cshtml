@@ -1,0 +1,14 @@
+﻿@model ProduitVM
+<form method="post" enctype="multipart/form-data" asp-action="Create" asp-controller="Produit">
+    <div class="mb-3 raw">
+        <label asp-for="produit.categorieId"></label>
+        <select asp-for="produit.categorieId" asp-items="@Model.categorieListe" class="form-select" name="categorieId">
+            <option disabled selected>--choisir une catégorie--</option>
+        </select>
+    </div>
+    <div class="mb-3 raw">
+        <label asp-for="produit.imageURL"></label>
+        <input type="file" name="file" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>

@@ -1,0 +1,8 @@
+﻿
+<p style="color:antiquewhite">product Index Page</p>
+@foreach (var obj in Model)
+{
+    <td>
+        <img src="@Url.Content(obj.imageURL)" width="100" alt="Image non disponible" />
+    </td>
+}
